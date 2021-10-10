@@ -9,7 +9,7 @@ const GoalInput = (props: {
   const [enteredGoal, setEnteredGoal] = useState("");
 
   const addGoalHandler = () => {
-    if (!enteredGoal.trim().length) {
+    if (!enteredGoal.trim()) {
       return;
     }
     props.onAdd(enteredGoal.trim());

@@ -13,7 +13,7 @@ export const MealsFavouritesNavigator = createMaterialBottomTabNavigator(
       screen: MealsNavigator,
       navigationOptions: {
         tabBarIcon: (tabInfo: { tintColor: string }) => (
-          <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />
+          <Ionicons name="md-restaurant" size={25} color={tabInfo.tintColor} />
         ),
         tabBarLabel: <Text>Meals</Text>,
       },
@@ -22,7 +22,7 @@ export const MealsFavouritesNavigator = createMaterialBottomTabNavigator(
       screen: FavouritesNavigator,
       navigationOptions: {
         tabBarIcon: (tabInfo: { tintColor: string }) => (
-          <Ionicons name="ios-star" size={25} color={tabInfo.tintColor} />
+          <Ionicons name="md-star" size={25} color={tabInfo.tintColor} />
         ),
         tabBarLabel: <Text>Favourites</Text>,
       },

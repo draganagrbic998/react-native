@@ -12,8 +12,8 @@ const FavouriteButton = (props: {
         title="Favourite"
         iconName={
           !props.navigation.getParam("isFavourite")
-            ? "ios-star-outline"
-            : "ios-star"
+            ? "md-star-outline"
+            : "md-star"
         }
         onPress={props.navigation.getParam("toggleFavouriteHandler")}
       />

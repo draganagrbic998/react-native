@@ -10,7 +10,7 @@ const MenuButton = (props: {
     <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
       <Item
         title="Menu"
-        iconName="ios-menu"
+        iconName="md-menu"
         onPress={props.navigation.toggleDrawer}
       />
     </HeaderButtons>

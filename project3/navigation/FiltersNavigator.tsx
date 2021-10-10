@@ -29,7 +29,7 @@ export const FiltersNavigator = createStackNavigator(
             <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
               <Item
                 title="Save"
-                iconName="ios-save"
+                iconName="md-save"
                 onPress={props.navigation.getParam("saveFiltersHandler")}
               />
             </HeaderButtons>

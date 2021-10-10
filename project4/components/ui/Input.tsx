@@ -30,7 +30,7 @@ const Input = (props: InputProps): JSX.Element => {
   const inputValid = (value: string): boolean => {
     const emailRegex =
       /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (props.required && !value.trim().length) {
+    if (props.required && !value.trim()) {
       return false;
     }
     if (props.email && !emailRegex.test(value.toLowerCase())) {
