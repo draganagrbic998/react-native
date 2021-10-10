@@ -22,12 +22,14 @@ const ShopDrawerNavigator = createDrawerNavigator();
 const ShopNavigator = (): JSX.Element => {
   const dispatch = useDispatch();
   const token = useSelector((state) => (state as RootReducer).user?.token);
+  const cancelToken = axios.CancelToken.source();
 
   const sub1 = axios.interceptors.request.use(
     (request) => {
       if (token) {
         request.headers["Authorization"] = token;
       }
+      request.cancelToken = cancelToken.token;
       return request;
     },
     (error) => {
@@ -48,10 +50,11 @@ const ShopNavigator = (): JSX.Element => {
 
   useEffect(() => {
     return () => {
+      cancelToken.cancel();
       axios.interceptors.request.eject(sub1);
       axios.interceptors.response.eject(sub2);
     };
-  }, [sub1, sub2]);
+  });
 
   return (
     <ShopDrawerNavigator.Navigator
