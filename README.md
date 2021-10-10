@@ -1,10 +1,8 @@
-# Commands
-
-1. SIMULATOR => ctrl+m
-2. DEBUGER => ctrl+t
-3. expo publish
-4. expo build:android/build:ios
-5. expo optimize
-6. expo upgrade
+1. ctrl+m => SIMULATOR
+2. ctrl+t => DEBUGGER
+3. expo upgrade
+4. expo optimize
+5. expo publish
+6. expo build:android
 7. expo upload:android
 8. expo fetch:android:keystore => RUN THIS AFTER BUILD!
